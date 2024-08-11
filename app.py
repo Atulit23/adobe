@@ -5,8 +5,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import requests
 import io
+from scipy.interpolate import interp1d
+from flask_cors import CORS  # Import CORS
 
 app = Flask(__name__)
+CORS(app) 
+
+CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/ddvajyjou/image/upload'
+UPLOAD_PRESET = 'nb6tvi1b'
 
 CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/ddvajyjou/image/upload'
 UPLOAD_PRESET = 'nb6tvi1b'
